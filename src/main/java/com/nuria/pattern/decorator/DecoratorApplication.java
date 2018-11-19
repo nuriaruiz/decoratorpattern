@@ -11,11 +11,13 @@ public class DecoratorApplication {
 		SpringApplication.run(DecoratorApplication.class, args);
 
 		Door oakBeveledLacqueredDoor = new LacqueredDoor(new BeveledDoor( new PlainOakDoor()));
-		System.out.println("Door: "+oakBeveledLacqueredDoor.getDescription());
+		System.out.println("\nDoor: "+oakBeveledLacqueredDoor.getDescription());
 		System.out.println("Cost: "+oakBeveledLacqueredDoor.getCost());
 
+		System.out.println("===========================================");
+
 		Door oakBeveledDoor = new BeveledDoor(new PlainOakDoor());
-		System.out.println("Door: "+oakBeveledDoor.getDescription());
+		System.out.println("\nDoor: "+oakBeveledDoor.getDescription());
 		System.out.println("Cost: "+oakBeveledDoor.getCost());
 	}
 }
